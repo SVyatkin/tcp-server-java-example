@@ -34,10 +34,15 @@ public class TCPServerThread extends Thread {
 				message += inputLine;
 			}
 			OutMessage(version, messageType, userId, message);
-			socket.close();
+	
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		finally {try {
+			if (socket != null) socket.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}}
 	}
 
 	private void OutMessage(int version, char[] messageType, char[] userId,
