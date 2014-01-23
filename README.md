@@ -4,7 +4,7 @@ run server
  
 NIO 
 
-$ java -cp tcp.server-0.0.1.jar com.nio.tcp.server.NIOTCPServer <port number> ...
+$ java -cp tcp.server-0.0.1.jar com.nio.tcp.server.NIOTCPServer port_number ...
 
 Generic 
 
